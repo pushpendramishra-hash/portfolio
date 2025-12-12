@@ -1,0 +1,399 @@
+<!-- index.html: S-Metric Website -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>S-Metric | ERP Consulting & Cloud Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<script>
+  // Mobile friendly: toggle expanded state on tap
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('click', function (e) {
+      // Only toggle when clicking the card not a link inside
+      // toggle expanded class and aria attributes
+      const expanded = this.classList.toggle('expanded');
+      this.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      const expandedArea = this.querySelector('.card-expanded');
+      if (expanded) {
+        expandedArea.setAttribute('aria-hidden', 'false');
+      } else {
+        expandedArea.setAttribute('aria-hidden', 'true');
+      }
+    });
+    // Prevent accidental double toggles if user clicks a link inside
+    card.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+  });
+</script>
+
+<body>
+
+  <!-- Scroll to top button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+
+  <!-- Navigation -->
+  <nav role="navigation">
+    <div class="navbar">
+      <div class="logo">
+  <a href="#home" class="logo-link">
+    <img src="https://smetric.com/wp-content/uploads/2022/03/S-Metric-ERP-Consulting-logo-Darkmode.png" 
+         alt="S-Metric Logo">
+    <span>S-Metric</span>
+  </a>
+</div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div class="cancel-btn"><i class="fas fa-times"></i></div>
+      </ul>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/s-metric-llc/" target="_blank" rel="noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="32" height="32" alt="LinkedIn" />
+        </a>
+        <a href="mailto:jsung@smetric.com" target="_blank" rel="noreferrer">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="menu-btn"><i class="fas fa-bars"></i></div>
+  </nav>
+
+ <!-- HERO SECTION -->
+<section class="home" id="home">
+  <div class="home-content">
+
+    <!-- Left column: hero text -->
+    <div class="hero-left">
+      <div class="text">
+        <div class="text-one">Simple. Secure. Scalable.</div>
+        <div class="text-two">S-Metric</div>
+        <div class="text-three">ERP and Cloud Consulting</div>
+        <div class="text-four">Microsoft Dynamics Business Central and Shopify</div>
+        <div class="text-five">20+ years delivering Business Central, Shopify and Power Platform solutions</div>
+
+        <div class="button">
+          <a class="fcc-btn" href="#contact">Request a Consultation</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column: badges -->
+    <aside class="hero-right" aria-hidden="true">
+      <div class="trust-badges">
+        <div class="badge">
+          <img src="https://logowik.com/content/uploads/images/clutch-5-star3208.logowik.com.webp" alt="Clutch 5 Star">
+        </div>
+
+        <div class="badge">
+          <img src="https://smetric.com/wp-content/uploads/2022/07/logo.png" alt="Microsoft Certified">
+        </div>
+
+  </div>
+</section>
+
+  </section>
+
+ <section class="about" id="about">
+  <div class="content">
+    <div class="title"><span>About S Metric</span></div>
+
+    <div class="about-details">
+      <div class="left">
+        <img
+          src="https://images.pexels.com/photos/840996/pexels-photo-840996.jpeg"
+          alt="S Metric team working together in an office">
+      </div>
+
+      <div class="right">
+        <div class="topic">Your partner for modern ERP and commerce</div>
+
+        <p>
+          S Metric helps growing companies modernize operations with Microsoft Dynamics 365 Business Central,
+          Shopify, and Power Platform. We bring two decades of practical experience designing solutions that
+          reduce manual work, improve financial visibility, and make operations predictable.
+        </p>
+
+        <p>
+          We deliver assessment and roadmap services, implementation and integration, and ongoing managed
+          support so your system continues to deliver value as your business grows.
+        </p>
+
+        <ul class="about-list">
+          <li>Microsoft Dynamics 365 Business Central consulting and implementation</li>
+          <li>Shopify commerce integration and omni channel fulfilment</li>
+          <li>Power Platform solutions for offline mobile, automation and dashboards</li>
+        </ul>
+
+        <div class="about-cta">
+          <a class="btn" href="#contact">Talk to an expert</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Expertise Section -->
+  <section class="skills" id="expertise">
+  <div class="content">
+    <div class="title"><span>Our Expertise</span></div>
+
+    <div class="skills-details">
+
+      <!-- LEFT SIDE CONTENT -->
+      <div class="text">
+        <div class="topic">Cloud ERP and Business Process Design</div>
+
+        <p>
+          We combine ERP practices, integration experience, and change
+          management to deliver systems that streamline workflows
+          and support long term growth.
+        </p>
+
+        <div class="experience">
+          <div class="num">20+</div>
+          <div class="exp">Years of<br>ERP Experience</div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE BOXES -->
+      <div class="boxes">
+
+        <div class="box">
+          <img class="expertise-icon" src="https://cdn-icons-png.flaticon.com/512/906/906324.png" alt="Business Central">
+          <div class="topic">Business Central</div>
+          <div class="per">Expert</div>
+        </div>
+
+        <div class="box">
+          <img class="expertise-icon" src="https://cdn-icons-png.flaticon.com/512/906/906334.png" alt="Dynamics Sales">
+          <div class="topic">Dynamics Sales</div>
+          <div class="per">Expert</div>
+        </div>
+
+        <div class="box">
+          <img class="expertise-icon" src="https://cdn-icons-png.flaticon.com/512/906/906342.png" alt="Power Platform">
+          <div class="topic">Power Platform</div>
+          <div class="per">Advanced</div>
+        </div>
+
+        <div class="box">
+          <img class="expertise-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968872.png" alt="Shopify">
+          <div class="topic">Shopify</div>
+          <div class="per">Expert</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</div>
+
+ <!-- SERVICES SECTION -->
+<section class="services" id="services">
+  <div class="content">
+    <div class="title"><span>Our Services</span></div>
+
+    <div class="services-grid">
+
+      <!-- Service 1 -->
+      <button class="service-card" aria-expanded="false">
+        <div class="card-minimal">
+          <img class="service-img" src="images/service1.jpeg" alt="ERP Assessment and Roadmap">
+          <div class="card-title-wrap">
+            <div class="card-title">ERP Assessment &amp; Roadmap</div>
+            <div class="card-sub">Practical assessment, risk analysis and phased roadmap.</div>
+          </div>
+        </div>
+        <div class="card-expanded" aria-hidden="true">
+          <p>Review systems and processes, identify risks, and define a phased Business Central roadmap aligned to your business goals and budget.</p>
+        </div>
+      </button>
+
+      <!-- Service 2 -->
+      <button class="service-card" aria-expanded="false">
+        <div class="card-minimal">
+          <img class="service-img" src="images/service2.jpeg" alt="Business Central Implementation">
+          <div class="card-title-wrap">
+            <div class="card-title">Business Central Implementation</div>
+            <div class="card-sub">Design, configuration and go live support.</div>
+          </div>
+        </div>
+        <div class="card-expanded" aria-hidden="true">
+          <p>Design, configuration, data migration, testing, training and go live support to ensure smooth adoption and predictable outcomes.</p>
+        </div>
+      </button>
+
+      <!-- Service 3 -->
+      <button class="service-card" aria-expanded="false">
+        <div class="card-minimal">
+          <img class="service-img" src="images/service3.jpeg" alt="Integration Services">
+          <div class="card-title-wrap">
+            <div class="card-title">Integration Services</div>
+            <div class="card-sub">Shopify, EDI and third party integration.</div>
+          </div>
+        </div>
+        <div class="card-expanded" aria-hidden="true">
+          <p>Connect Business Central with Shopify, marketplaces, EDI partners, warehouse systems and third party apps for reliable data flows.</p>
+        </div>
+      </button>
+
+      <!-- Service 4 -->
+      <button class="service-card" aria-expanded="false">
+        <div class="card-minimal">
+          <img class="service-img" src="images/service4.jpeg" alt="Commerce and Omni Channel">
+          <div class="card-title-wrap">
+            <div class="card-title">Commerce and Omni Channel</div>
+            <div class="card-sub">Shopify integration and fulfilment orchestration.</div>
+          </div>
+        </div>
+        <div class="card-expanded" aria-hidden="true">
+          <p>Shopify and Magento integrations, inventory sync, order routing and fulfilment orchestration for omni channel commerce.</p>
+        </div>
+      </button>
+
+      <!-- Service 5 -->
+      <button class="service-card" aria-expanded="false">
+        <div class="card-minimal">
+          <img class="service-img" src="images/service5.jpeg" alt="Customization and Extensions">
+          <div class="card-title-wrap">
+            <div class="card-title">Customization and Extensions</div>
+            <div class="card-sub">Custom pages, APIs and Power Platform automation.</div>
+          </div>
+        </div>
+        <div class="card-expanded" aria-hidden="true">
+          <p>Custom pages, APIs and Power Platform automation including offline mobile apps and Power BI dashboards for decision making.</p>
+        </div>
+      </button>
+
+      <!-- Service 6 -->
+      <button class="service-card" aria-expanded="false">
+        <div class="card-minimal">
+          <img class="service-img" src="images/service6.jpeg" alt="Managed Support and Optimization">
+          <div class="card-title-wrap">
+            <div class="card-title">Managed Support and Optimization</div>
+            <div class="card-sub">Ongoing support, performance tuning and reporting.</div>
+          </div>
+        </div>
+        <div class="card-expanded" aria-hidden="true">
+          <p>Ongoing support, performance tuning and reporting. We help you keep the platform healthy and continuously improving.</p>
+        </div>
+      </button>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="industries" id="industries">
+  <div class="content">
+    <div class="title"><span>Industries we serve</span></div>
+
+    <div class="industry-grid">
+
+      <!-- Column 1 -->
+      <div class="industry-column">
+        <article class="industry-card">
+          <img class="industry-icon" src="https://img.icons8.com/color/96/meal.png" alt="Food distribution">
+          <div class="industry-body">
+            <h4>Distribution – Food</h4>
+            <p>We help food distributors manage multi warehouse operations with visibility into stock expiry and picking. Voice guided picking and palletization logic reduce errors and speed fulfilment. Transport bidding and routing are integrated to balance cost and service. Forecasting drives procurement so you do not run empty or overstock.</p>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <img class="industry-icon" src="https://img.icons8.com/color/96/diamond.png" alt="High value merchandise">
+          <div class="industry-body">
+            <h4>Distribution – High value merchandise</h4>
+            <p>We design controls for high value goods so inventory and shipments remain secured and auditable. Serial and lot tracking ensures traceability across storage and transit. Integrated order workflows enforce approvals and reduce financial leakage. Multi currency and multi company support keeps accounts accurate.</p>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <img class="industry-icon" src="https://img.icons8.com/color/96/biohazard.png" alt="Hazardous materials">
+          <div class="industry-body">
+            <h4>Distribution – Hazardous materials</h4>
+            <p>We implement inventory controls and document handling to meet safety and compliance needs. Special storage and handling rules are encoded into receiving and picking. Labeling and certificate workflows simplify inspections and audits. Automated alerts help prevent storage or transport breaches.</p>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <img class="industry-icon" src="https://img.icons8.com/color/96/ingredients.png" alt="Processed food">
+          <div class="industry-body">
+            <h4>Manufacturing – Processed food</h4>
+            <p>We deliver process manufacturing with recipe management lot tracking and yield calculation. Material consumption and machine runtime feed accurate costing. Expiry aware picking minimizes waste. Shop floor integration gives real time production visibility to operations and finance.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="industry-column">
+        <article class="industry-card">
+          <img class="industry-icon" src="https://img.icons8.com/color/96/t-shirt.png" alt="Fashion apparel">
+          <div class="industry-body">
+            <h4>Manufacturing – Fashion apparel</h4>
+            <p>We support size and color variants seasonal planning and multiple bills of material. Demand planning and allocation help balance online and wholesale channels. Production scheduling and subcontractor workflows keep lead times predictable. Returns and repair flows improve the customer experience.</p>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <img class="industry-icon" src="https://img.icons8.com/color/96/product.png" alt="Custom merchandise">
+          <div class="industry-body">
+            <h4>Manufacturing – Custom merchandise</h4>
+            <p>We automate custom order capture from commerce platforms to production and fulfilment. Design approvals and file storage flow into the shop floor. We support drop ship and consolidated billing for franchise networks. Demand forecasts guide raw material buys and reduce rush costs.</p>
+          </article>
+
+        <article class="industry-card">
+          <img class="industry-icon" src="https://img.icons8.com/color/96/maintenance.png" alt="HVAC dispatcher">
+          <div class="industry-body">
+            <h4>Services – HVAC dispatcher</h4>
+            <p>Field service scheduling with offline mobile capabilities keeps technicians productive in the field. Work orders parts pickup and time capture feed finance in real time. Route optimization reduces travel time and improves response. Service histories and warranties speed diagnostics.</p>
+          </article>
+
+        <article class="industry-card">
+          <img class="industry-icon" src="https://img.icons8.com/color/96/share.png" alt="EDI and omni channel">
+          <div class="industry-body">
+            <h4>Integrations – EDI and omni channel</h4>
+            <p>We build robust EDI mappings for retail partners and keep commerce platforms synced for stock pricing and orders. Order routing supports multiple warehouses and drop ship. Monitoring and alerts help keep integrations healthy. We design retry and exception flows so operations keep running.</p>
+          </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="content">
+      <div class="title"><span>Contact Us</span></div>
+      <div class="text">
+        <div class="topic">Let’s Talk About Your ERP Plans</div>
+        <p>Share your goals and we will explore whether Business Central is the right fit.</p>
+        <div class="button"><a class="fcc-btn" href="mailto:info@smetric.com">Email Us</a></div>
+        <p>Connect with us on LinkedIn for updates and insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="text">© S-Metric | All Rights Reserved</div>
+  </footer>
+
+</body>
+</html>
+
